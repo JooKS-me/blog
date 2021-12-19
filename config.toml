@@ -6,7 +6,8 @@ languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 # 网站标题
-title = "我的全新 Hugo 网站"
+title = "JooKS 的个人博客"
+avatarURL = "/images/62384022.jpeg"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "LoveIt"
@@ -14,6 +15,30 @@ theme = "LoveIt"
 [params]
   # LoveIt 主题版本
   version = "0.2.X"
+  keywords = ["JooKS", "java", "开源"]
+
+  [params.footer]
+    enable = true
+    hugo = true
+    since = 2020
+
+  [params.home]
+    [params.home.profile]
+      enable = true
+      avatarURL = "/images/62384022.jpeg"
+      typeit = true
+      social = true
+
+  [params.social]
+    GitHub = "JooKS-me"
+    Email = "jooks@apache.org"
+
+  [params.page]
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Weibo = true
 
 [menu]
   [[menu.main]]

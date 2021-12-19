@@ -2,6 +2,8 @@
 title: "记一次服务端Java程序崩溃"
 date: Fri Feb 19 12:29:53 CST 2021
 categories: ["Linux"]
+author: "JooKS"
+authorLink: "https://github.com/JooKS-me"
 tags: ["Linux"]
 draft: false
 ---

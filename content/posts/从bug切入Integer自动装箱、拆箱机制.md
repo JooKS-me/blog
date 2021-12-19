@@ -2,6 +2,8 @@
 title: "从bug切入Integer自动装箱、拆箱机制"
 date: Mon Mar 08 00:02:17 CST 2021
 categories: ["Java基础"]
+author: "JooKS"
+authorLink: "https://github.com/JooKS-me"
 tags: ["Java基础"]
 draft: false
 ---

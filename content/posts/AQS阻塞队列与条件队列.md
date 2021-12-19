@@ -2,6 +2,8 @@
 title: "AQS阻塞队列与条件队列"
 date: Wed Mar 03 21:22:33 CST 2021
 categories: ["Java基础"]
+author: "JooKS"
+authorLink: "https://github.com/JooKS-me"
 tags: ["Java基础"]
 draft: false
 ---

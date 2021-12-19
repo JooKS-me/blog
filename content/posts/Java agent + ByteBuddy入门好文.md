@@ -2,6 +2,8 @@
 title: "Java agent + ByteBuddy入门好文"
 date: Mon May 10 18:33:02 CST 2021
 categories: ["Java基础"]
+author: "JooKS"
+authorLink: "https://github.com/JooKS-me"
 tags: ["Java基础"]
 draft: false
 ---

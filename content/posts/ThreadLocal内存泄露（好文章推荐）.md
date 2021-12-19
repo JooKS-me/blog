@@ -2,6 +2,8 @@
 title: "ThreadLocal内存泄露（好文章推荐）"
 date: Mon Mar 01 15:55:32 CST 2021
 categories: ["Java基础"]
+author: "JooKS"
+authorLink: "https://github.com/JooKS-me"
 tags: ["Java基础"]
 draft: false
 ---

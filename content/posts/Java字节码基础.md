@@ -2,6 +2,8 @@
 title: "Java字节码基础"
 date: Wed Feb 24 15:56:59 CST 2021
 categories: ["Java基础"]
+author: "JooKS"
+authorLink: "https://github.com/JooKS-me"
 tags: ["Java基础"]
 draft: false
 ---

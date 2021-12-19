@@ -2,6 +2,8 @@
 title: "Shell脚本，从小白到入门"
 date: Thu Feb 18 18:48:28 CST 2021
 categories: ["Linux"]
+author: "JooKS"
+authorLink: "https://github.com/JooKS-me"
 tags: ["Linux"]
 draft: false
 ---
