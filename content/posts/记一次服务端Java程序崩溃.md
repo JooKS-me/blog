@@ -1,8 +1,8 @@
 ---
 title: "记一次服务端Java程序崩溃"
 date: Fri Feb 19 12:29:53 CST 2021
-categories: Linux
-tags: Linux
+categories: ["Linux"]
+tags: ["Linux"]
 draft: false
 ---
 

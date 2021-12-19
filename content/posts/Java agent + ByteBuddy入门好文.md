@@ -1,8 +1,8 @@
 ---
 title: "Java agent + ByteBuddy入门好文"
 date: Mon May 10 18:33:02 CST 2021
-categories: Java基础
-tags: Java基础
+categories: ["Java基础"]
+tags: ["Java基础"]
 draft: false
 ---
 

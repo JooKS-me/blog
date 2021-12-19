@@ -1,8 +1,8 @@
 ---
 title: "Apache Shenyu源码阅读计划（一）初印象"
 date: Sat Jun 12 10:13:55 CST 2021
-categories: 中间件
-tags: 中间件
+categories: ["中间件"]
+tags: ["中间件"]
 draft: false
 ---
 

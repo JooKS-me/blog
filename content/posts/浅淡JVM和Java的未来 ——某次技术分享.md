@@ -1,8 +1,8 @@
 ---
 title: "浅淡JVM和Java的未来 ——某次技术分享"
 date: Sat May 08 20:29:50 CST 2021
-categories: Java基础
-tags: Java基础
+categories: ["Java基础"]
+tags: ["Java基础"]
 draft: false
 ---
 

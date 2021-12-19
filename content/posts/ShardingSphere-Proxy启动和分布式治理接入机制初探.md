@@ -1,8 +1,8 @@
 ---
 title: "ShardingSphere-Proxy启动和分布式治理接入机制初探"
 date: Wed May 19 17:44:20 CST 2021
-categories: 中间件
-tags: 中间件
+categories: ["中间件"]
+tags: ["中间件"]
 draft: false
 ---
 

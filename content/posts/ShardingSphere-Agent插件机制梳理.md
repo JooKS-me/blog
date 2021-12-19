@@ -1,8 +1,8 @@
 ---
 title: "ShardingSphere-Agent插件机制梳理"
 date: Thu May 20 23:17:48 CST 2021
-categories: 中间件
-tags: 中间件
+categories: ["中间件"]
+tags: ["中间件"]
 draft: false
 ---
 

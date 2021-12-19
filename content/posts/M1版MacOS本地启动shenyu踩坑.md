@@ -1,8 +1,8 @@
 ---
 title: "M1版MacOS本地启动shenyu踩坑"
 date: Thu Nov 25 22:22:25 CST 2021
-categories: 中间件
-tags: 中间件
+categories: ["中间件"]
+tags: ["中间件"]
 draft: false
 ---
 

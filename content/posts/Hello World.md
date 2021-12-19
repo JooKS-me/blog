@@ -1,8 +1,8 @@
 ---
 title: "Hello World"
 date: Fri Jan 29 22:20:13 CST 2021
-categories: 项目
-tags: 项目
+categories: ["项目"]
+tags: ["项目"]
 draft: false
 ---
 

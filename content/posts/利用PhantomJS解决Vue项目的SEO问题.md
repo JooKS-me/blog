@@ -1,8 +1,8 @@
 ---
 title: "利用PhantomJS解决Vue项目的SEO问题"
 date: Fri Feb 19 00:58:49 CST 2021
-categories: 前端
-tags: 前端
+categories: ["前端"]
+tags: ["前端"]
 draft: false
 ---
 

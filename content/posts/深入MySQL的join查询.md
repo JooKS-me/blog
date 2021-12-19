@@ -1,8 +1,8 @@
 ---
 title: "深入MySQL的join查询"
 date: Sat Apr 03 14:18:10 CST 2021
-categories: DB类
-tags: DB类
+categories: ["DB类"]
+tags: ["DB类"]
 draft: false
 ---
 

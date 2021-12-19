@@ -1,8 +1,8 @@
 ---
 title: "OpenTelemetry和分布式链路追踪小调研"
 date: Mon Jul 12 17:57:37 CST 2021
-categories: 中间件
-tags: 中间件
+categories: ["中间件"]
+tags: ["中间件"]
 draft: false
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "开源之夏分享：ShardingSphere-Agent新增OpenTelemetry插件"
 date: Mon Aug 02 01:36:04 CST 2021
-categories: 中间件
-tags: 中间件
+categories: ["中间件"]
+tags: ["中间件"]
 draft: false
 ---
 

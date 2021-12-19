@@ -1,8 +1,8 @@
 ---
 title: "Apache Shenyu源码阅读计划（二）HTTP请求梳理"
 date: Sat Jun 12 23:14:53 CST 2021
-categories: 中间件
-tags: 中间件
+categories: ["中间件"]
+tags: ["中间件"]
 draft: false
 ---
 

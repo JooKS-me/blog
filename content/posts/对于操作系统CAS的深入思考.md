@@ -1,8 +1,8 @@
 ---
 title: "对于操作系统CAS的深入思考"
 date: Sat Apr 10 22:11:51 CST 2021
-categories: 操作系统
-tags: 操作系统
+categories: ["操作系统"]
+tags: ["操作系统"]
 draft: false
 ---
 

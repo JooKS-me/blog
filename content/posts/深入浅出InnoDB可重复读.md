@@ -1,8 +1,8 @@
 ---
 title: "深入浅出InnoDB可重复读"
 date: Thu Feb 25 21:44:24 CST 2021
-categories: DB类
-tags: DB类
+categories: ["DB类"]
+tags: ["DB类"]
 draft: false
 ---
 

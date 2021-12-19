@@ -1,8 +1,8 @@
 ---
 title: "Java字节码基础"
 date: Wed Feb 24 15:56:59 CST 2021
-categories: Java基础
-tags: Java基础
+categories: ["Java基础"]
+tags: ["Java基础"]
 draft: false
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "myblog玩具总结"
 date: Thu Feb 04 22:24:18 CST 2021
-categories: 项目
-tags: 项目
+categories: ["项目"]
+tags: ["项目"]
 draft: false
 ---
 

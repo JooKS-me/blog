@@ -1,8 +1,8 @@
 ---
 title: "深入浅出IO模型（一）：BIO"
 date: Tue Mar 16 17:13:33 CST 2021
-categories: 操作系统
-tags: 操作系统
+categories: ["操作系统"]
+tags: ["操作系统"]
 draft: false
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "从JVM的角度看基本数据类型"
 date: Mon Apr 26 09:24:44 CST 2021
-categories: Java基础
-tags: Java基础
+categories: ["Java基础"]
+tags: ["Java基础"]
 draft: false
 ---
 
