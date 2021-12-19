@@ -1,0 +1,38 @@
+name: Deloy to COS
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install Hugo
+      run: |
+        wget -nv https://github.com/gohugoio/hugo/releases/download/v0.90.1/hugo_extended_0.90.1_Linux-64bit.tar.gz -O hugo.tar.gz
+        mkdir $HOME/hugo
+        tar -zxvf hugo.tar.gz -C $HOME/hugo
+
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.6
+
+    - name: Install coscmd
+      run: |
+        pip install coscmd
+
+    - name: deploy
+      env:
+        COS_BUCKET_NAME: blog-1301164990
+        COS_BUCKET_LOCATION: ap-shanghai
+      run: |
+        export PATH=$HOME/hugo:$PATH
+        hugo
+        coscmd config -a ${{secrets.COS_SECRET_ID}} -s ${{secrets.COS_SECRET_KEY}} -b ${COS_BUCKET_NAME} -r ${COS_BUCKET_LOCATION} -m 10
+        coscmd upload -r -s public/ /
+
+
