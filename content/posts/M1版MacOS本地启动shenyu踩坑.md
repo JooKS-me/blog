@@ -15,7 +15,7 @@ draft: false
 embedded-redis社区issue：https://github.com/kstyrc/embedded-redis/issues/127
 2. protobuf-maven-plugin执行失败，原因grpc不支持m1
 解决方法如下：
-```
+```shell
 // 指定系统识别号，或者在settings.xml里面改（推荐）
 // 见：https://github.com/grpc/grpc-java/issues/7690
                 <configuration>
@@ -33,3 +33,4 @@ embedded-redis社区issue：https://github.com/kstyrc/embedded-redis/issues/127
    暂时解决：手动build镜像。
 
    这个问题本质上是 `dockerfile-maven-plugin` 不支持arm架构。
+
