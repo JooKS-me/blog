@@ -28,4 +28,8 @@ embedded-redis社区issue：https://github.com/kstyrc/embedded-redis/issues/127
 
 本地运行集成测试
 
-1. TODO: docker打包后是amd64架构的镜像，无法启动。
+1. docker打包后是amd64架构的镜像，无法启动。
+
+   暂时解决：手动build镜像。
+
+   这个问题本质上是 `dockerfile-maven-plugin` 不支持arm架构。
