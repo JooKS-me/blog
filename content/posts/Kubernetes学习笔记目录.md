@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes学习笔记目录"
-date: 2022-01-01T22:09:05+08:00
+date: 2022-01-01T19:15:54+08:00
 categories: ["云原生"]
 author: "JooKS"
 authorLink: "https://github.com/JooKS-me"
