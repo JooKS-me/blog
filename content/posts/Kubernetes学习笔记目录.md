@@ -12,7 +12,7 @@ draft: false
 
 
 
-- 深入理解StatefulSet
+- [深入理解StatefulSet](../深入理解statefulset)
 
   
 
