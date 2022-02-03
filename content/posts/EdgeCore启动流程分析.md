@@ -1,6 +1,6 @@
 ---
 title: "EdgeCore启动流程"
-date: 2022-02-03T00:23:01+08:00
+date: 2022-02-03T00:00:01+08:00
 author: JooKS
 authorLink: https://github.com/JooKS-me
 tags: ["云原生","KubeEdge"]
