@@ -153,25 +153,152 @@ subjects:
 
 剩下的是绑定权限。
 
-## 启动流程
+## API资源
 
-老规矩，启动流程必看。
+为了方便直接用curl访问rest api，我们使用kubectl的反向代理功能。
 
-cmd包中，有两个命令，`addon-manager` 和 `apiserver`。
+```shell
+kubectl proxy --port=8080
+```
 
-这个 `addon-manager` 是干什么的腻🤔
+然后，利用curl命令访问前面创建的api资源。
+
+```shell
+curl http://localhost:8080/apis/cluster.core.oam.dev/v1alpha1/
+```
+
+会得到如下结果：
+
+```json
+{
+  "kind": "APIResourceList",
+  "apiVersion": "v1",
+  "groupVersion": "cluster.core.oam.dev/v1alpha1",
+  "resources": [
+    {
+      "name": "clustergateways",
+      "singularName": "",
+      "namespaced": false,
+      "kind": "ClusterGateway",
+      "verbs": [
+        "get",
+        "list"
+      ]
+    },
+    {
+      "name": "clustergateways/proxy",
+      "singularName": "",
+      "namespaced": false,
+      "kind": "ClusterGatewayProxyOptions",
+      "verbs": [
+        "create",
+        "delete",
+        "get",
+        "patch",
+        "update"
+      ]
+    }
+  ]
+}
+```
+
+可以看到这里有一个clustergateways资源，它有一个proxy子资源。（正如 `概述` 里描述的那样）
+
+然后我们通过如下路径就可以操作clustergateways/proxy
+
+```
+/apis/cluster.core.oam.dev/v1alpha1/clustergateways/cluster_name/proxy/<api>
+```
+
+## 如何转发K8S请求
+
+> 看了半天还是懵的QAQ，还是太菜了
+
+这里用到了 `apimachinery` ，而这个框架的底层核心是 go 原生的反向代理工具 `ReverseProxy#ServeHTTP`。
+
+主要看 `clustergateway_proxy.go` 中的 ServeHTTP 方法。
+
+```go
+func (p *proxyHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
+   cluster := p.clusterGateway
+   ...
+
+   // WithContext creates a shallow clone of the request with the same context.
+   newReq := request.WithContext(request.Context())
+   newReq.Header = utilnet.CloneHeader(request.Header)
+   newReq.URL.Path = p.path
+
+   urlAddr, err := GetEndpointURL(cluster)
+   if err != nil {
+      responsewriters.InternalError(writer, request, errors.Wrapf(err, "failed parsing endpoint for cluster %s", cluster.Name))
+      return
+   }
+   host, _, _ := net.SplitHostPort(urlAddr.Host)
+   // 1. 重写路径
+   path := strings.TrimPrefix(request.URL.Path, apiPrefix+p.parentName+apiSuffix)
+   // 2. 重写host
+   newReq.Host = host
+   newReq.URL.Path = path
+   newReq.URL.RawQuery = request.URL.RawQuery
+   newReq.RequestURI = newReq.URL.RequestURI()
+
+   cfg, err := NewConfigFromCluster(cluster)
+   if err != nil {
+      responsewriters.InternalError(writer, request, errors.Wrapf(err, "failed creating cluster proxy client config %s", cluster.Name))
+      return
+   }
+   if p.impersonate {
+      cfg.Impersonate = getImpersonationConfig(request)
+   }
+   rt, err := restclient.TransportFor(cfg)
+   if err != nil {
+      responsewriters.InternalError(writer, request, errors.Wrapf(err, "failed creating cluster proxy client %s", cluster.Name))
+      return
+   }
+   proxy := apiproxy.NewUpgradeAwareHandler(
+      &url.URL{
+         Scheme:   urlAddr.Scheme,
+         Path:     path,
+         Host:     urlAddr.Host,
+         RawQuery: request.URL.RawQuery,
+      },
+      rt,
+      false,
+      false,
+      nil)
+
+   const defaultFlushInterval = 200 * time.Millisecond
+   // ...
+   // 这里是配置tls
+   proxy.UpgradeTransport = apiproxy.NewUpgradeRequestRoundTripper(
+      upgrading,
+      RoundTripperFunc(func(req *http.Request) (*http.Response, error) {
+         newReq := utilnet.CloneRequest(req)
+         return upgrader.RoundTrip(newReq)
+      }))
+   proxy.Transport = rt
+   proxy.FlushInterval = defaultFlushInterval
+   proxy.Responder = ErrorResponderFunc(func(w http.ResponseWriter, req *http.Request, err error) {
+      p.responder.Error(err)
+   })
+   proxy.ServeHTTP(writer, newReq)
+}
+```
+
+1. 重写路径
+
+   会把 `xxx/xxxx/xxx/proxy/<api>` 里的 \<api> 提出来。
+
+2. 重写host
+
+   根据cluster获取真实的后端
 
 > 未完待续
-
-
-
-
-
-
-
-
-
-
-
-
+>
+> 后面还有
+>
+> - vela-core如何与网关对接
+> - 如何根据请求确定后端集群
+>
+> 这两个才是硬骨头。。。
 
