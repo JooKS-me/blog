@@ -293,12 +293,37 @@ func (p *proxyHandler) ServeHTTP(writer http.ResponseWriter, request *http.Reque
 
    根据cluster获取真实的后端
 
-> 未完待续
->
-> 后面还有
->
-> - vela-core如何与网关对接
-> - 如何根据请求确定后端集群
->
-> 这两个才是硬骨头。。。
+## vela-core如何与网关对接
+
+vela-core与网关对接这块的核心逻辑在 `pkg/multicluster/proxy.go` 中
+
+```go
+// RoundTrip is the main function for the re-write API path logic
+func (rt *secretMultiClusterRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
+   ctx := req.Context()
+   clusterName, ok := ctx.Value(ClusterContextKey).(string)
+   if !ok || clusterName == "" || clusterName == ClusterLocalName {
+      return rt.rt.RoundTrip(req)
+   }
+
+   req.URL.Path = FormatProxyURL(clusterName, req.URL.Path)
+   return rt.rt.RoundTrip(req)
+}
+```
+
+程序会先根据context中的ClusterName是否为local来决定是否需要经过网关路由。
+
+对于非local节点来说，会经过 `FormatProxyURL` 方法重写URL：
+
+```go
+// FormatProxyURL will format the request API path by the cluster gateway resources rule
+func FormatProxyURL(clusterName, originalPath string) string {
+   originalPath = strings.TrimPrefix(originalPath, "/")
+   return strings.Join([]string{"/apis", clusterapi.SchemeGroupVersion.Group, clusterapi.SchemeGroupVersion.Version, "clustergateways", clusterName, "proxy", originalPath}, "/")
+}
+```
+
+这个方法就是加上 `/apis/.../proxy/` 前缀，这样请求就会打到网关上了。
+
+
 
