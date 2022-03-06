@@ -4,19 +4,39 @@ date: 2022-01-16T18:03:51+08:00
 draft: false
 ---
 
-你好，
+Hi,
 
-我是JooKS。
+I'm JooKS
 
-目前是门头沟学院大三在读。
+Study at Northeastern University
 
-比较喜欢参与开源，目前是Apache ShenYu的Committer，以及Apache ShardingSphere、KubeEdge、OpenTelemetry的Contributor。
+Committer of Apache ShenYu
 
+Contributor of KubeVela, Apache ShardingSphere, KubeEdge, OpenTelemetry, and so on
 
+Interested in Cloud Native, Traffic Governance and Observability
 
-我的微信：`echo 'am9va3MtbWUK' | base64 --decode`
+---
 
+Programming experience:
 
+Learned Visual Basic, simple algorithm and Digital Circuits in high school.
 
- By the way，这个博客的源码在 https://github.com/JooKS-me/blog。基于hugo构建，只需git push，即可触发工作流，构建成静态资源后推送至腾讯云对象存储，实现更新。
+ In the first year of college, Participated in the ACM / XCPC training team. Then I realized I was a piece of shit... However, I have developed a strong interest in network and Linux when brushing codeforces. (Because in China, [codeforces.com](http://codeforces.com) is very slow to access, then you get the idea)
+
+In my second year of college, I started learning Java programming, and I was exposed to open source. I participated in [Summer 2021 of OSPP](https://summer.iscas.ac.cn/).
+
+In my third year of college, I skipped classes to do an internship at [Meituan](https://about.meituan.com/en) as a Back-end R&D of AIoT (nearly got kicked out of school). Then, I started learning cloud native after the internship, and participated in LFX Mentorship.
+
+The story is still in progress. . .
+
+---
+
+My wechat: `echo 'am9va3MtbWUK' | base64 --decode`
+
+My email: jookunshuai@gmail.com
+
+---
+
+By the way, the source code for this blog is at https://github.com/JooKS-me/blog. Based on hugo, you only need git push to trigger the workflow, build static resources and push them to Tencent Cloud Object Storage for updates.
 
