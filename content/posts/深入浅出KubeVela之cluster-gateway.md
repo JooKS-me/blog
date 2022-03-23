@@ -325,5 +325,14 @@ func FormatProxyURL(clusterName, originalPath string) string {
 
 这个方法就是加上 `/apis/.../proxy/` 前缀，这样请求就会打到网关上了。
 
-> 未完待续
+## cluster-gateway是怎么获取密钥的
 
+在kubevela中，集群是以secret的形式来存储的。
+
+cluster-gateway根据集群的名字就能从集群中获取密钥，然后去访问被管控集群。
+
+事实上，`vela cluster join xxxx`
+
+就会创建这样一个secret
+
+`vela cluster list`命令就是去查询这样的secret
