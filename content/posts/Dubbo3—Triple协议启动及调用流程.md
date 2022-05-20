@@ -1,5 +1,5 @@
 ---
-title: "Dubbo3.0—Triple协议启动及调用流程"
+title: "Dubbo3—Triple协议启动及调用流程"
 date: 2022-05-20T00:23:50+08:00
 author: JooKS
 authorLink: https://github.com/JooKS-me
@@ -965,7 +965,7 @@ public void run(Channel channel) {
 
 ## 流调用原理探究
 
-Dubbo3 的 Triple 协议有三种调用模式：unary、server_stream (服务端流)、bi_stream (双向流)，client_stream 还未实现。有了上面的基础后，看 Stream RPC 这块就比较简单了。
+Dubbo3 的 Triple 协议有三种调用模式：unary、server_stream (服务端流)、bi_stream (双向流) 。有了上面的基础后，看 Stream RPC 这块就比较简单了。
 
 ```java
 AsyncRpcResult invokeServerStream(MethodDescriptor methodDescriptor, Invocation invocation,

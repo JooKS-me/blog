@@ -12,7 +12,7 @@ Study at Northeastern University
 
 Committer & PPMC Member of Apache ShenYu
 
-Contributor of KubeVela, Apache ShardingSphere, KubeEdge, OpenTelemetry, and so on
+Reviewer of KubeVela, Contributor of Apache ShardingSphere, KubeEdge, OpenTelemetry, and so on
 
 Interested in Cloud Native, Traffic Governance and Observability
 
