@@ -1284,6 +1284,8 @@ protected void channelRead0(ChannelHandlerContext ctx, Http2StreamFrame msg) thr
 
 总结为下图（可能有点乱），如果是流的方式，则会不断拉数据。pendingDeliveries 会在 1 - 2 之间不断跳动（不会变成 0），最总流结束后，调用 TriDecoder#close 结束调用。
 
+这里其实跟反压很像。（这个是不是就是dubbo实现的反压？）
+
 ![image-20220520181701865](https://img.jooks.cn/img/202205201817901.png)
 
 unary 其实也类似，不过在 onData 时不会增加 pendingDeliveries。
