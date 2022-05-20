@@ -1328,6 +1328,8 @@ public void onHeadersRead(ChannelHandlerContext ctx, Http2HeadersFrame msg) thro
 
 发现其实 server 端接收跟 client 端接收是差不多的，都是利用 TriDecoder 的相关方法实现消息的接收。
 
+另外，如果我们使用 stub 来调用，那么会调用自动生成的 DubboXXXXTriple 类中的方法，然后调用 StubInvocationUtil -> InvocationUtil 实现远程调用。
+
 ## 总结
 
 由于 Triple协议 是建立在 http2 的基础上，因此天然具备了 stream 和 全双工 的能力。
@@ -1337,6 +1339,4 @@ public void onHeadersRead(ChannelHandlerContext ctx, Http2HeadersFrame msg) thro
 ## 参考
 
 [1] https://blog.csdn.net/superfjj/article/details/121507952
-
-
 
