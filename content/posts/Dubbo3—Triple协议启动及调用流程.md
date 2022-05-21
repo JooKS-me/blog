@@ -963,7 +963,7 @@ public void run(Channel channel) {
 
 往 channel 中写数据后，flush channel。
 
-## 流调用原理探究
+## 流调用原理探究（包含反压实现）
 
 Dubbo3 的 Triple 协议有三种调用模式：unary、server_stream (服务端流)、bi_stream (双向流) 。有了上面的基础后，看 Stream RPC 这块就比较简单了。
 
@@ -1198,7 +1198,7 @@ protected void channelRead0(ChannelHandlerContext ctx, Http2StreamFrame msg) thr
   }
   ```
 
-  这个地方 call#request 会去调用 netty 的 CompositeByteBuf 去接收 n 个消息。具体的代码在 TriDecoder#deliver 中。
+  这个地方 call#request 会去调用 netty 的 CompositeByteBuf（零拷贝相关） 去接收 n 个消息。具体的代码在 TriDecoder#deliver 中。
 
   ```java
   private void deliver() {
@@ -1268,7 +1268,7 @@ protected void channelRead0(ChannelHandlerContext ctx, Http2StreamFrame msg) thr
   }
   ```
 
-  这里调用了 deframer.deframe(data) 
+  这里调用了 deframer.deframe(data) 。**这里的 accumulate 是 CompositeByteBuf 类型，用来处理零拷贝。**这里的 addComponent 方法就是用来动态增加 ByteBuf 。 
 
   ```java
   @Override
