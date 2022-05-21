@@ -1286,7 +1286,7 @@ protected void channelRead0(ChannelHandlerContext ctx, Http2StreamFrame msg) thr
 
 这里其实跟反压很像。（这个是不是就是dubbo实现的反压？）
 
-![image-20220521180303274](https://img.jooks.cn/img/202205211803308.png)
+![image-20220521221751565](https://img.jooks.cn/img/202205212217643.png)
 
 unary 其实也类似，不过在 onData 时不会增加 pendingDeliveries。
 
