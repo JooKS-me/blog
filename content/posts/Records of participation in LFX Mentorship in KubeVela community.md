@@ -32,13 +32,15 @@ The application was later successfully approved.
 
 After the event started, I started to finish the issue according to my plan.
 
-In the process of writing code and receiving code reviews, I have gained a lot of knowledge that is not the same as before. When there is a question, the tutor is always patient to answer and always encouraging.
+In the process of writing code and receiving code reviews, I have gained a lot of knowledge that is not the same as before. When there is a question, the mentor is always patient to answer and always encouraging.
 
 After making some contributions, according to the membership rules of the KubeVela community, I was also promoted to be a KubeVela Reviewer.
 
+![Reviewer](https://img.jooks.cn/img/202206030029630.jpg)
+
 ## After
 
-I hope to continue participating in this project to learn and gain more.
+I will continue to work on this project to learn and gain more when I have free time.
 
 ## Summary
 
