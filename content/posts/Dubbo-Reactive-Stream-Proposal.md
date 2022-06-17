@@ -1,5 +1,5 @@
 ---
-title: "Dubbo Reactive Stream Proposal——开源之夏2022项目申请书"
+title: "Dubbo Reactive Stream Proposal（开源之夏2022项目申请书）"
 date: 2022-06-17T00:12:30+08:00
 author: JooKS
 authorLink: https://github.com/JooKS-me
