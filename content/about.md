@@ -8,13 +8,13 @@ Hi,
 
 I'm JooKS
 
-Study at Northeastern University
+Study at Northeastern University (CN)
 
-Committer & PPMC Member of Apache ShenYu
+[Apache ShenYu](https://shenyu.apache.org/) PMC & Committer
 
-Reviewer of KubeVela, Contributor of Apache ShardingSphere, KubeEdge, OpenTelemetry, and so on
+Contributor of KubeVela, Apache Dubbo, Apache ShardingSphere, and so on
 
-Interested in Cloud Native, Traffic Governance and Observability
+Familiar with network middleware and frameworks, and interested in cloud native
 
 ---
 
@@ -22,11 +22,13 @@ My Programming Experience:
 
 Learned Visual Basic, simple algorithm and Digital Circuits in high school.
 
- In the first year of college, Participated in the ACM / XCPC training team. Then I realized I was a piece of shit... However, I have developed a strong interest in network and Linux when brushing codeforces. (Because in China, [codeforces.com](http://codeforces.com) is very slow to access, then you get the idea)
+ In the first year of college, Participated in the ACM / XCPC training team. However, I have developed a strong interest in network and Linux.
 
-In my second year of college, I started learning Java programming, and I was exposed to open source. I participated in [Summer 2021 of OSPP](https://summer.iscas.ac.cn/).
+In my second year of college, I started learning Java programming, and I was exposed to open source. I participated in [Summer 2021 of OSPP](https://summer.iscas.ac.cn/), provides an `opentelemetry-plugin` for shardingsphere to help ss-proxy connect to third-party tracing systems.
 
-In my third year of college, I skipped classes to do an internship at [Meituan](https://about.meituan.com/en) as a Back-end R&D of AIoT. Then, I started learning cloud native after the internship, and participated in LFX Mentorship.
+In my third year of college, I do an internship at [Meituan](https://about.meituan.com/en) as a Back-end R&D of AIoT. Then, I started learning cloud native after the internship, and participated in LFX Mentorship in KubeVela Community.
+
+In the summer after my junior year, I participated in [Summer 2022 of OSPP](https://summer.iscas.ac.cn/) as a student to provide reactive stream support for dubbo. Also participated in GSoC 2022 as a mentor of ASF.
 
 The story is still in progress. . .
 
@@ -34,7 +36,7 @@ The story is still in progress. . .
 
 My wechat: `echo 'am9va3MtbWUK' | base64 --decode`
 
-My email: jookunshuai@gmail.com
+My email: jooks@apache.org / jookunshuai@gmail.com
 
 ![12B1F5A0008A4ECC5E15C80065790BD6](https://img.jooks.cn/img/202204091158035.jpg)
 
