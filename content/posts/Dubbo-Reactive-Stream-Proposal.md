@@ -8,10 +8,6 @@ categories: ["OpenSource Internship"]
 draft: false
 ---
 
-> 这个新特性还在规划和开发中，并不是最终版，开发过程中可能会修改。
->
-> ~~Proposal 精髓：画图 & 吹牛~~
-
 ## 项目详情
 
 项目名称：Dubbo Reactive Stream 支持
