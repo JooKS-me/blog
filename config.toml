@@ -21,6 +21,7 @@ theme = "LoveIt"
     enable = true
     hugo = true
     since = 2020
+    icp = "浙ICP备20003836号-1"
 
   [params.home]
     [params.home.profile]
