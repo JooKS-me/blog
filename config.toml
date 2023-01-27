@@ -21,7 +21,7 @@ theme = "LoveIt"
     enable = true
     hugo = true
     since = 2020
-    icp = "浙ICP备20003836号-1"
+    icp = "<a href='https://beian.miit.gov.cn/' target='_blank'>浙ICP备20003836号-1</a>"
 
   [params.home]
     [params.home.profile]
