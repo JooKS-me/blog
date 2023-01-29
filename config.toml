@@ -6,7 +6,7 @@ languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 # 网站标题
-title = "JooKS' Blog"
+title = "我的编程学习日志"
 avatarURL = "/images/62384022.jpeg"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
